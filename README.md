@@ -12,6 +12,9 @@ void main() {
     DerelictPortMidi.load();
     DerelictPortTime.load();
     
+    // Initialize PortMidi
+    Pm_Initialize();
+    
     // Now PortMidi functions can be called.
     ...
 }
