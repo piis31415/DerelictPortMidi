@@ -12,7 +12,7 @@ private {
     //NOTE: According to the documentation found in /pm_mac/README_MAC.txt,
     //everything is contained in libportmidi.dylib, no mention of a libporttime.dylib
     else static if(Derelict_OS_Mac)
-        num libNames = "libportmidi.dylib, /usr/local/lib/libportmidi.dylib";
+        enum libNames = "libportmidi.dylib, /usr/local/lib/libportmidi.dylib";
 
     else static if(Derelict_OS_Posix)
         enum libNames = "libporttime.so, /usr/local/lib/libporttime.so";
