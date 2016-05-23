@@ -123,7 +123,7 @@ extern(C) @nogc nothrow {
     alias da_Pm_HasHostError = int function(PortMidiStream* stream);
     alias da_Pm_GetErrorText = const(char)* function(PmError errnum);
     alias da_Pm_GetHostErrorText = const(char)* function(char* msg, uint len);
-    alias da_Pm_CountDevices = void function();
+    alias da_Pm_CountDevices = int function();
     alias da_Pm_GetDefaultInputDeviceID = PmDeviceID function();
     alias da_Pm_GetDefaultOutputDeviceID = PmDeviceID function();
     alias da_Pm_GetDeviceInfo = const(PmDeviceInfo)* function(PmDeviceID id);
