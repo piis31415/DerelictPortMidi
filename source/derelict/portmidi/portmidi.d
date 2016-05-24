@@ -49,7 +49,9 @@ enum {
     PM_FILT_SYSTEMCOMMON = (PM_FILT_MTC | PM_FILT_SONG_POSITION | PM_FILT_SONG_SELECT | PM_FILT_TUNE)   
 }
 
-enum PmError {
+alias PmError = int;
+
+enum : PmError {
     pmNoError = 0,
     pmHostError = -10000,
     pmInvalidDeviceId,

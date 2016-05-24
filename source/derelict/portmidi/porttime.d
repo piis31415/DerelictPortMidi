@@ -21,7 +21,9 @@ private {
         static assert(0, "Need to implement libporttime libNames for this operating system.");
 }
 
-enum PtError {
+alias PtError = int;
+
+enum : PtError {
     ptNoError = 0,
     ptHostError = -10000,
     ptAlreadyStarted,
