@@ -32,10 +32,10 @@ enum : PtError {
 }
 
 alias PtTimestamp = int;
-alias PtCallback = void function(PtTimestamp timestamp, void* userData);
+extern(C) nothrow alias PtCallback = void function(PtTimestamp timestamp, void* userData);
 
 extern(C) @nogc nothrow {
-    alias da_Pt_Start = PtError function(int resolution, PtCallback* callback, void* userData);
+    alias da_Pt_Start = PtError function(int resolution, PtCallback callback, void* userData);
     alias da_Pt_Stop = PtError function();
     alias da_Pt_Started = int function();
     alias da_Pt_Time = PtTimestamp function();
