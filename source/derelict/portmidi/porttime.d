@@ -5,9 +5,9 @@ private {
     import derelict.util.system;
 
     //Note: On Linux, libportmidi and libporttime are separate libraries.
-    //Under Windows, both sets of functions are actually supplied by libPortTime.dll
+    //Under Windows, both sets of functions are actually supplied by libPortMidi.dll
     static if(Derelict_OS_Windows)
-        enum libNames = "libPortTime.dll";
+        enum libNames = "libPortMidi.dll";
 
     //NOTE: According to the documentation found in /pm_mac/README_MAC.txt,
     //everything is contained in libportmidi.dylib, no mention of a libporttime.dylib
