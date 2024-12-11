@@ -4,7 +4,6 @@ private {
     import derelict.util.loader;
     import derelict.util.system;
 
-    //Note: On Linux, libportmidi and libporttime are separate libraries.
     //Under Windows, both sets of functions are actually supplied by libPortMidi.dll
     static if(Derelict_OS_Windows)
         enum libNames = "libPortMidi.dll";
@@ -14,8 +13,9 @@ private {
     else static if(Derelict_OS_Mac)
         enum libNames = "libportmidi.dylib, /usr/local/lib/libportmidi.dylib";
 
+    //NOTE: libporttime has since been merged into libportmidi as well.
     else static if(Derelict_OS_Posix)
-        enum libNames = "libporttime.so, /usr/local/lib/libporttime.so";
+        enum libNames = "libportmidi.so, /usr/local/lib/libportmidi.so";
         
     else
         static assert(0, "Need to implement libporttime libNames for this operating system.");
